@@ -1,0 +1,146 @@
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--light-gray);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+}
+
+#container {
+  background-color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  max-width: 628px;
+
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#container .title-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+
+  padding: 40px;
+}
+
+.title-container h1 {
+  color: var(--cyan);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.title-container h2 {
+  color: var(--bright-yellow);
+  font-size: 1.2rem;
+}
+
+.title-container p {
+  color: var(--grayish-blue);
+  font-weight: 400;
+}
+
+.bottom {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+}
+
+.bottom .box {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.4rem;
+
+  padding: 40px;
+  padding-right: 0;
+  color: #fff;
+}
+
+.bottom .first {
+  background-color: var(--cyan);
+  flex-basis: 50%;
+}
+
+.bottom .first h1 {
+  position: relative;
+  font-size: 2rem;
+}
+
+.bottom .first small {
+  position: absolute;
+  top: 0.5rem;
+  margin-left: 1rem;
+  font-size: 1rem;
+  color: #5fcbc9;
+}
+
+.bottom .first a {
+  color: #fff;
+  background-color: var(--bright-yellow);
+  max-width: 240px;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.bottom .second {
+  background-color: #4abebd;
+  flex-basis: 50%;
+  padding-right: 60px;
+}
+
+.second p {
+  color: var(--light-gray);
+  line-height: 1.5rem;
+}
+
+@media screen and (max-width: 628px) {
+  #container .title-container {
+    padding: 25px;
+  }
+
+  .title-container p {
+    line-height: 1.7rem;
+    text-align-last: left;
+  }
+
+  #container {
+    margin: 0 20px;
+  }
+
+  .bottom {
+    flex-direction: column;
+  }
+
+  .bottom .box {
+    padding: 25px;
+  }
+
+  .bottom .first a {
+    max-width: 100%;
+  }
+}
